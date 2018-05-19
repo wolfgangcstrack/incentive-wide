@@ -9,8 +9,8 @@ export default function fetchBankAccounts() {
     axios.get(`${baseUrl}/customers/${id}/bankAccounts`).then((response) => {
       const { data: bankAccounts } = response;
 
-      bankAccounts.forEach((bankLoan) => {
-        const modeledBankAccount = new BankAccount(bankLoan);
+      bankAccounts.forEach((bankAccount) => {
+        const modeledBankAccount = new BankAccount(bankAccount);
         const { id } = modeledBankAccount;
         BankAccounts.upsert({id}, {$set: modeledBankAccount});
       });
