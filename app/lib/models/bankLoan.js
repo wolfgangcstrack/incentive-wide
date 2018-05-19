@@ -12,15 +12,15 @@ class BankLoan {
       issueDate,
     } = options;
 
-    this._id = id;
+    this._id = String(id);
 
     if (document) {
       _.extend(this, document);
-    } else if (!id) {
+    } else if (_.isNull(id) || _.isUndefined(id)) {
       throw new Meteor.Error('BankLoad needs id field');
     } else {
       _.extend(this, {
-        id,
+        id: String(id),
         customerId,
         type,
         borrowedAmmt,
