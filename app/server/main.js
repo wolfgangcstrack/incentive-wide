@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+  const testDoc = {_id: 'testDoc'};
+  Customers.upsert(testDoc, {$set: testDoc});
+  BankLoans.upsert(testDoc, {$set: testDoc});
 });
