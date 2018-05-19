@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { DashBoardMain } from './container/DashBoardMain';
 
+
 const App = () => (
   <div>
     <DashBoardMain />
@@ -14,4 +15,5 @@ if (Meteor.isClient) {
     ReactDOM.render(<App />, document.getElementById('app'));
   });
 }
+
 
