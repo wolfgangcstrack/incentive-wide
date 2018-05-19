@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Switch, Route } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
+
 import { DashBoardMain } from './container/DashBoardMain';
 
+const browserHistory = createBrowserHistory();
 
 const App = () => (
-  <div>
-    <DashBoardMain />
-  </div>
-)
+  <Router history={browserHistory}>
+    <Switch>
+      <Route exact path="/" component={DashBoardMain} />
+    </Switch>
+  </Router>
+);
 
-if (Meteor.isClient) {
-  Meteor.startup(function () {
-    // Use Meteor.startup to render the component after the page is ready
-    ReactDOM.render(<App />, document.getElementById('app'));
-  });
-}
-
-
+export default App;
