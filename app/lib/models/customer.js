@@ -2,6 +2,7 @@ class Customer {
   constructor(options) {
     let {
       document,
+      id,
       givenName,
       middleInitial,
       familyName,
@@ -15,10 +16,15 @@ class Customer {
       homeOwnersInsurance,
     } = options;
 
+    this._id = id;
+
     if (document) {
       _.extend(this, document)
+    } else if (!id) {
+      throw new Meteor.Error('Customer needs id field');
     } else {
       _.extend(this, {
+        id,
         givenName: givenName || '',
         middleInitial: middleInitial || '',
         familyName: familyName || '',
