@@ -11,8 +11,9 @@ export default function fetchBankLoans() {
 
       bankLoans.forEach((bankLoan) => {
         const modeledBankLoan = new BankLoan(bankLoan);
-        BankLoans.upsert(modeledBankLoan, {$set: modeledBankLoan});
-      })
+        const { id } = modeledBankLoan;
+        BankLoans.upsert({id}, {$set: modeledBankLoan});
+      });
     })
   });
 }
