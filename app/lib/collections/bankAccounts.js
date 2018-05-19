@@ -1,4 +1,4 @@
-global.BankAccount = new Mongo.Collection('bankAccount', {
+global.BankAccounts = new Mongo.Collection('bankAccounts', {
   transform(document) {
     return new BankAccount({ document });
   }
