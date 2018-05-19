@@ -2,6 +2,7 @@ class BankAccountTransaction {
   constructor(options) {
     let {
       document,
+      id,
       amount,
       bankAccountId,
       creditDebitType,
@@ -13,16 +14,19 @@ class BankAccountTransaction {
 
     if (document) {
       _.extend(this, document)
+    } else if (_.isNull(id) || _.isUndefined(id)) {
+      throw new Meteor.Error('BankAccountTransaction needs id field');
     } else {
       _.extend(this, {
-        amount: amount,
-        bankAccountId: bankAccountId,
-        creditDebitType: creditDebitType,
-        description: description,
-        referenceNumber: referenceNumber,
-        transactionTimestamp: transactionTimestamp,
-        transactionType: transactionType,
-      })
+        id: String(id),
+        amount,
+        bankAccountId,
+        creditDebitType,
+        description,
+        referenceNumber,
+        transactionTimestamp,
+        transactionType,
+      });
     }
   }
 }

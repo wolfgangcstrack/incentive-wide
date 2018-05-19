@@ -7,7 +7,8 @@ export default function fetchCustomers() {
 
     customers.forEach((customer) => {
       const modeledCustomer = new Customer(customer);
-      Customers.upsert(modeledCustomer, {$set: modeledCustomer});
-    })
+      const { id } = modeledCustomer;
+      Customers.upsert({id}, {$set: modeledCustomer});
+    });
   });
 }

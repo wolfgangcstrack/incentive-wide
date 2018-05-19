@@ -25,23 +25,19 @@ class Customer {
     } else {
       _.extend(this, {
         id: String(id),
-        givenName: givenName || '',
-        middleInitial: middleInitial || '',
-        familyName: familyName || '',
-        age: age || 21,
-        householdIncome: Customer._defaultToZero(householdIncome),
-        address: address || '',
-        city: city || '',
-        state: state || '',
-        zip: Customer._defaultToZero(zip),
-        autoInsurance: Boolean(autoInsurance),
-        homeOwnersInsurance: homeOwnersInsurance || '',
-      })
+        givenName,
+        middleInitial,
+        familyName,
+        age,
+        householdIncome,
+        address,
+        city,
+        state,
+        zip,
+        autoInsurance,
+        homeOwnersInsurance,
+      });
     }
-  }
-
-  static _defaultToZero(number) {
-    return (number || number === 0) ? number : 0;
   }
 }
 

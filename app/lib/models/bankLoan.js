@@ -17,7 +17,7 @@ class BankLoan {
     if (document) {
       _.extend(this, document);
     } else if (_.isNull(id) || _.isUndefined(id)) {
-      throw new Meteor.Error('BankLoad needs id field');
+      throw new Meteor.Error('BankLoan needs id field');
     } else {
       _.extend(this, {
         id: String(id),
@@ -28,7 +28,7 @@ class BankLoan {
         currentBalance,
         monthlyPayment,
         issueDate,
-      })
+      });
     }
   }
 }
