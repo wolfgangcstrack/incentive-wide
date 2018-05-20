@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 const CreditScoreContainer = () => (
     <div className="column is-6">
     <div className="card events-card">
