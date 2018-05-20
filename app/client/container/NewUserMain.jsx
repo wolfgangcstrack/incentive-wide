@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './../main.css'
 
 
 class NewUserMain extends React.Component {
@@ -25,28 +26,31 @@ class NewUserMain extends React.Component {
 
   render() {
     return (
-      <div className="columns">
-        <div className="column"></div>
-          <div className="is-half">
-            <form className="contorl">
-              <div className="field">
-                <input className="input" type="text" name="fullName" onChange={onChange} placeholder="Fullname"/>
-              </div>
-              <div className="field">
-              <input className="input" type="text" name="creditScore" onChange={onChange} placeholder="Credit Score"/>
-              </div>
-              <div className="field">
-              <input className="input" type="text" name="bankAccountSavings" onChange={onChange} placeholder="Savings"/>
-              </div>
-              <div className="field is-grouped">
-                <div className="control">
-                  <button className="button is-link">Submit</button>
+      // <div className="section">
+      
+        <div className="columns">
+          <div className="column"></div>
+            <div className="is-half">
+              <form className="contorl">
+                <div className="field">
+                  <input className="input" type="text" name="fullName" onChange={onChange} placeholder="Fullname"/>
                 </div>
-              </div>
-            </form>
-          </div>
-        <div className="column"></div>
-      </div>
+                <div className="field">
+                <input className="input" type="text" name="creditScore" onChange={onChange} placeholder="Credit Score"/>
+                </div>
+                <div className="field">
+                <input className="input" type="text" name="bankAccountSavings" onChange={onChange} placeholder="Savings"/>
+                </div>
+                <div className="field is-grouped">
+                  <div className="control">
+                    <button className="button is-link">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          <div className="column"></div>
+        </div>
+     // </div>
     );
   }
 }

@@ -1,0 +1,31 @@
+/* CSS declarations go here */
+.houseImgOverlay{
+  width:100%;
+  -khtml-opacity:.50;
+  -moz-opacity:.50;
+  -ms-filter:”alpha(opacity=50)”;
+   filter:alpha(opacity=50);
+   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+   opacity:.50;
+
+}
+.overlay{
+  position: relative;
+
+}
+.form-test{
+  background-color: black;
+  opacity: 0.5;
+}
+#push{
+  padding-top: 30%;
+}
+.beforeImage{
+  position: absolute;
+  top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+body {
+  /* background-color: red */
+}
