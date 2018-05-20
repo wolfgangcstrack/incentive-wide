@@ -16,7 +16,7 @@ class Referral extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange(e) {
@@ -24,7 +24,7 @@ class Referral extends Component {
     this.setState({ [name]: value });
   }
 
-  handleSubmit() {
+  handleClick() {
     this.props.alert.success(`An email has been sent to ${this.state.name}.`);
     this.setState({
       email: '',
@@ -34,7 +34,7 @@ class Referral extends Component {
 
   render() {
     return (
-      <form style={refStyle} onSubmit={this.handleSubmit}>
+      <div style={refStyle}>
         <h1 className="title">Refer a friend</h1>
         <div className="control has-icons-left has-icons-right">
           <input
@@ -64,10 +64,10 @@ class Referral extends Component {
           </span>
         </div>
         <br />
-        <button className="button is-success">
+        <button className="button is-success" onClick={this.handleClick}>
           Refer
         </button>
-      </form>
+      </div>
     );
   }
 }

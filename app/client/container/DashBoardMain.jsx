@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { DashBoardTemplate } from '../present/DashBoardTemplate';
+import DashBoardTemplate from '../present/DashBoardTemplate';
 import { Provider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 
 const options = {
   timeout: 5000,
-  position: "bottom center"
+  position: 'top center',
 };
 
 class DashBoardMain extends React.Component {
