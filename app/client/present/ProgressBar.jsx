@@ -7,14 +7,14 @@ const style = {
 
 const indStyle = {
   paddingTop: "10px",
-  height: "160px",
+  height: "130px",
   // width: "25%",
   // border: "1px solid black",
   backgroundColor: '#E8F7EE',
 }
 const indStyle2 = {
   paddingTop: "10px",
-  height: "160px",
+  height: "130px",
   // width: "25%",
   // border: "1px solid black",
   backgroundColor: '#C9D6EA',
@@ -39,24 +39,22 @@ const ProgressBar = ({data, referralCount}) => {
   <div className='column is-4'>
   <div className="card events-card">
   <div style={indStyle} className="credit">
-    <h1 className="title">credit</h1>
+    <h1 style={{paddingLeft: "22px"}}className="title">credit</h1>
         <progress style={{marginLeft: "20px", width:"250px"}} className="progress is-primary progress is-large" value={data.credit.actual / data.credit.goal * 100} max="100"></progress>
-    <span>actual: {data.credit.actual} goal: {data.credit.goal}</span>
   </div>
   <div style={indStyle2}>
-        <h1 className="title">savings</h1>
+          <h1 style={{paddingLeft: "22px"}} className="title">savings</h1>
         <progress style={{ marginLeft: "20px", width: "250px" }} className="progress is-info progress is-large" value={data.savings.actual / data.savings.goal * 100} max="100">50%</progress>
-    <span>actual: {data.savings.actual} goal: {data.savings.goal}</span>
   </div>
   <div style={indStyle}>
-        <h1 className="title">insurance</h1>
+        <h1 style={{paddingLeft: "22px"}} className="title">insurance</h1>
         <progress style={{ marginLeft: "20px", width: "250px" }} className="progress is-primary progress is-large" value={data.insurance.actual / data.insurance.goal * 100} max="100">30%</progress>
-        <span>actual: {data.insurance.actual} goal: {data.insurance.goal}</span>
+        
   </div>
   <div style={indStyle2}>
-        <h1 className="title">referals</h1>
+      <h1 style={{paddingLeft: "22px"}} className="title">referals</h1>
         <progress style={{ marginLeft: "20px", width: "250px" }} className="progress is-info progress is-large" value={data.refer.actual / data.refer.goal * 100} max="100">30%</progress>
-        <span>actual: {referralCount} goal: {data.refer.goal}</span>
+        
   </div>
   </div>
   </div>
