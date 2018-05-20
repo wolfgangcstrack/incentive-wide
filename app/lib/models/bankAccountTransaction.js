@@ -12,6 +12,8 @@ class BankAccountTransaction {
       transactionType,
     } = options;
 
+    this._id = String(id);
+
     if (document) {
       _.extend(this, document)
     } else if (_.isNull(id) || _.isUndefined(id)) {
@@ -32,4 +34,4 @@ class BankAccountTransaction {
 }
 
 
-global.BankAccount = BankAccount;
+global.BankAccountTransaction = BankAccountTransaction;
