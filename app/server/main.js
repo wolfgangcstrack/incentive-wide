@@ -17,3 +17,9 @@ Meteor.startup(() => {
       fetchBankLoans();
     })
 });
+
+Meteor.methods({
+  addReferral: (customerId, fullName, email) => {
+    Referrals.insert({ customerId, fullName, email });
+  },
+});

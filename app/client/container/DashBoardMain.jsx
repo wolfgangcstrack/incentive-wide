@@ -6,15 +6,26 @@ class DashBoardMain extends React.Component {
     super(props);
     this.state = {
       name: 'Daniel',
+      referrals: {},
     };
     // bindings
+    this.getReferrals = this.getReferrals.bind(this);
+  }
 
+  getReferrals() {
+    const referrals = Referrals.find({ customerId: '2' });
+    this.setState({
+      referrals,
+    });
   }
 
   render() {
     return (
       <div>
-        <DashBoardTemplate name={this.state.name} />
+        <DashBoardTemplate
+          name={this.state.name}
+          referrals={this.state.referrals}
+        />
       </div>
     );
   }
