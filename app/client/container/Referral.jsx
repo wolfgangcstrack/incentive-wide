@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withAlert } from 'react-alert';
 
 const refStyle = {
   height: '260px',
@@ -24,12 +25,10 @@ class Referral extends Component {
   }
 
   handleSubmit() {
-    Meteor.call('addReferral', '2', this.state.name, this.state.email, (err) => {
-      if (err) {
-        console.error(err);
-      } else {
-        Referrals.find({});
-      }
+    this.props.alert.success(`An email has been sent to ${this.state.name}.`);
+    this.setState({
+      email: '',
+      name: '',
     });
   }
 
@@ -73,4 +72,4 @@ class Referral extends Component {
   }
 }
 
-export default Referral;
+export default withAlert(Referral);

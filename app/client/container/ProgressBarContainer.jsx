@@ -13,7 +13,7 @@ class ProgressBarContainer extends React.Component {
   }
   render(){
     return(
-        <ProgressBar data={fakeData}/>
+        <ProgressBar data={fakeData} />
     )
   }
 }

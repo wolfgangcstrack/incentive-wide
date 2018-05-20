@@ -1,32 +1,29 @@
 import React, { Component } from 'react';
 import { DashBoardTemplate } from '../present/DashBoardTemplate';
+import { Provider } from 'react-alert';
+import AlertTemplate from 'react-alert-template-basic';
+
+const options = {
+  timeout: 5000,
+  position: "bottom center"
+};
 
 class DashBoardMain extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       name: 'Daniel',
-      referrals: {},
     };
     // bindings
-    this.getReferrals = this.getReferrals.bind(this);
-  }
-
-  getReferrals() {
-    const referrals = Referrals.find({ customerId: '2' });
-    this.setState({
-      referrals,
-    });
   }
 
   render() {
     return (
-      <div>
+      <Provider template={AlertTemplate} {...options}>
         <DashBoardTemplate
           name={this.state.name}
-          referrals={this.state.referrals}
         />
-      </div>
+      </Provider>
     );
   }
 }

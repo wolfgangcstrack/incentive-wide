@@ -31,7 +31,7 @@ const progressSty = {
   width: "450px",
 }
 
-const ProgressBar = ({data}) => {
+const ProgressBar = ({data, referralCount}) => {
   percParc = {
     credit: data.actual/data.goal
   }
@@ -56,7 +56,7 @@ const ProgressBar = ({data}) => {
   <div style={indStyle2}>
         <h1 className="title">referals</h1>
         <progress style={{ marginLeft: "20px", width: "250px" }} className="progress is-info progress is-large" value={data.refer.actual / data.refer.goal * 100} max="100">30%</progress>
-        <span>actual: {data.refer.actual} goal: {data.refer.goal}</span>
+        <span>actual: {referralCount} goal: {data.refer.goal}</span>
   </div>
   </div>
   </div>

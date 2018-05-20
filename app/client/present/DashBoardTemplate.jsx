@@ -41,37 +41,39 @@ const DashBoardTemplate = ({ name }) => (
     {/* MAIN CONTAINER  */}
     <div className="container id-fluid">
       <div className="columns">
-        <div className="column">
-          {/* HERO USER GREET  */}
-          <section className="hero is-info welcome is-small">
-            <div className="hero-body">
-              <div className="container">
-                <h1 className="title">
-                  Hello, Admin.
-                </h1>
-                <h2 className="subtitle">
-                  I hope you are having a great day!
-                </h2>
-              </div>
-            </div>
-          </section>
-          <br />
-          {/* DASHBOARD AREA  */}
-          <div className="columns">
-            {/* DASHBOARD LEFT  */}
-            <ProgressBarContainer />
-            <div className="column is-8">
-              {/* DASHBOARD RIGHT  */}
-              <div className="box work">
-                <div className="columns">
-                  <div className="column is-half">
-                    <div className="box">
-                      <CreditScoreContainer />
-                    </div>
+
+          <div className="column">
+
+              <section className="hero is-info welcome is-small">
+                  <div className="hero-body">
+                      <div className="container">
+                          <h1 className="title">
+                              Hello, Admin.
+                          </h1>
+                          <h2 className="subtitle">
+                              I hope you are having a great day!
+                          </h2>
+                      </div>
                   </div>
-                  <div className="column is-half">
-                    <div className="box">
-                      <Insurance />
+              </section>
+              <br/>
+
+              <div className="columns">
+        <ProgressBarContainer />
+              <div className="column is-8">
+                <div className="box work">
+                  <div className="columns">
+                    <div className="column is-half">
+                      <div className="box">
+                        <CreditScoreContainer />
+                      </div>
+                    </div>
+                    <div className="column is-half">
+                      <div className="box">
+                        <Referral />
+
+
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -81,10 +83,9 @@ const DashBoardTemplate = ({ name }) => (
                     <div className="box">
                       <Referral />
                     </div>
-                  </div>
-                  <div className="column is-half">
-                    <div className="box">
-                      <SavingContainer />
+                    <div className="column is-half">
+                      <div className="box">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -94,7 +95,6 @@ const DashBoardTemplate = ({ name }) => (
         </div>
       </div>
     </div>
-  </div>
 );
 
-module.exports.DashBoardTemplate = DashBoardTemplate
+module.exports.DashBoardTemplate = DashBoardTemplate;
