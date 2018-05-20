@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const Insurance = () => (
-  <div className="dropdown is-active">
-  <div className="dropdown-trigger">
+const Insurance = ({ isActive, active }) => (
+  <div  className={active ? "dropdown is-active" : "dropdown"}>
+  <div onClick={()=> isActive()} className="dropdown-trigger">
     <button className="button" aria-haspopup="true" aria-controls="dropdown-menu2">
       <span>Content</span>
       <span className="icon is-small">
