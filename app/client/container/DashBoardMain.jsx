@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import { DashBoardTemplate } from '../present/DashBoardTemplate';
+import { Provider } from 'react-alert';
+import AlertTemplate from 'react-alert-template-basic';
+
+const options = {
+  timeout: 5000,
+  position: "bottom center"
+};
 
 class DashBoardMain extends React.Component {
   constructor(props) {
@@ -8,14 +15,15 @@ class DashBoardMain extends React.Component {
       name: 'Daniel',
     };
     // bindings
-
   }
 
   render() {
     return (
-      <div>
-        <DashBoardTemplate name={this.state.name} />
-      </div>
+      <Provider template={AlertTemplate} {...options}>
+        <DashBoardTemplate
+          name={this.state.name}
+        />
+      </Provider>
     );
   }
 }

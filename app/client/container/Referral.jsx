@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
+import { withAlert } from 'react-alert';
 
 const refStyle = {
   height: '260px',
   width: '260px',
-};
-
-const input = {
-  bottom: '0',
 };
 
 class Referral extends Component {
@@ -19,6 +16,7 @@ class Referral extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
@@ -26,9 +24,17 @@ class Referral extends Component {
     this.setState({ [name]: value });
   }
 
+  handleSubmit() {
+    this.props.alert.success(`An email has been sent to ${this.state.name}.`);
+    this.setState({
+      email: '',
+      name: '',
+    });
+  }
+
   render() {
     return (
-      <div style={refStyle}>
+      <form style={refStyle} onSubmit={this.handleSubmit}>
         <h1 className="title">Refer a friend</h1>
         <div className="control has-icons-left has-icons-right">
           <input
@@ -38,7 +44,6 @@ class Referral extends Component {
             placeholder="Full name"
             name="name"
             value={this.state.name}
-            style={input}
           />
           <span className="icon is-left">
             <i className="fas fa-user" />
@@ -53,7 +58,6 @@ class Referral extends Component {
             placeholder="Email"
             name="email"
             value={this.state.email}
-            style={input}
           />
           <span className="icon is-left">
             <i className="fas fa-envelope" />
@@ -63,9 +67,9 @@ class Referral extends Component {
         <button className="button is-success">
           Refer
         </button>
-      </div>
+      </form>
     );
   }
 }
 
-export default Referral;
+export default withAlert(Referral);

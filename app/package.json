@@ -10,10 +10,14 @@
     "history": "^4.7.2",
     "meteor-node-stubs": "^0.3.2",
     "react": "^16.3.2",
+    "react-alert": "^4.0.4",
+    "react-alert-template-basic": "^1.0.0",
     "react-dom": "^16.3.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-solidgauge": "^1.0.2"
+    "react-solidgauge": "^1.0.2",
+    "react-svg-gauge": "^1.0.8",
+    "react-transition-group": "^2.3.1"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
