@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { CreditScoreContainer } from '../container/CreditScoreContainer';
 import { ReferFriendContainer } from '../container/ReferFriendContainer';
 import { ProgressBarContainer } from '../container/ProgressBarContainer';
+import { ProgressBar } from './ProgressBar';
 
 const DashBoardTemplate = ({ name }) => (
   <div>
@@ -56,14 +57,51 @@ const DashBoardTemplate = ({ name }) => (
               </section>
               <br/>
 
-              <div className="columns plz">
-                <ReferFriendContainer />
-                <CreditScoreContainer />
-
-              </div>
               <div className="columns">
-              <ProgressBarContainer />
-              <ReferFriendContainer />
+                <div className="column is-4">
+                    <div className='box'>
+                    <progress className="progress is-primary" value="15" max="100">30%</progress>
+                    </div>
+                    <div className='box'>
+                    <progress className="progress is-primary" value="15" max="100">30%</progress>
+                    </div><div className='box'>
+                    <progress className="progress is-primary" value="15" max="100">30%</progress>
+                    </div><div className='box'>
+                    <progress className="progress is-primary" value="15" max="100">30%</progress>
+                    </div><div className='box'>
+                    <progress className="progress is-primary" value="15" max="100">30%</progress>
+                    </div>
+                </div>
+              <div className="column is-8">
+                <div className="box">
+                  <div className="columns">
+                    <div className="column is-half">
+                      <div className="box">
+                      Credit Report
+                      </div>
+                    </div>
+                    <div className="column is-half">
+                      <div className="box">
+                        Insurance
+                      </div>
+                    </div>
+                  </div>
+                <br/>
+                  <div className="columns">
+                    <div className="column is-half">
+                      <div className="box">
+                        Referals
+                      </div>
+                    </div>
+                    <div className="column is-half">
+                      <div className="box">
+                        Savings
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
 
             </div>
           </div>

@@ -36,7 +36,7 @@ const ProgressBar = ({data}) => {
     credit: data.actual/data.goal
   }
   return(
-  <div className='column is-6'>
+  <div className='column is-4'>
   <div className="card events-card">
   <div style={indStyle} className="credit">
     <h1 className="title">credit</h1>
