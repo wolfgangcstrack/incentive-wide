@@ -13,9 +13,7 @@ class ProgressBarContainer extends React.Component {
   }
   render(){
     return(
-      <div>
         <ProgressBar data={fakeData}/>
-      </div>
     )
   }
 }

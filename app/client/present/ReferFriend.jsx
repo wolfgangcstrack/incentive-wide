@@ -5,7 +5,7 @@ const ReferFriend = (props) => (
     <div className="card events-card">
         <header className="card-header">
             <p className="card-header-title">
-                AAAAA
+                PLACEHOLDER COMPONENT
             </p>
             <a href="#" className="card-header-icon" aria-label="more options">
   <span className="icon">

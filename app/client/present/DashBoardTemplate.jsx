@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CreditScoreContainer } from '../container/CreditScoreContainer';
 import { ReferFriendContainer } from '../container/ReferFriendContainer';
+import { ProgressBarContainer } from '../container/ProgressBarContainer';
 
 const DashBoardTemplate = ({ name }) => (
   <div>
@@ -61,7 +62,7 @@ const DashBoardTemplate = ({ name }) => (
 
               </div>
               <div className="columns">
-              <ReferFriendContainer />
+              <ProgressBarContainer />
               <ReferFriendContainer />
 
             </div>

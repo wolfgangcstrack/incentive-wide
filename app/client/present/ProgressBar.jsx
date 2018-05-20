@@ -6,7 +6,7 @@ const style = {
 }
 
 const indStyle = {
-  paddingTop: "10px", 
+  paddingTop: "10px",
   height: "160px",
   // width: "25%",
   // border: "1px solid black",
@@ -36,7 +36,8 @@ const ProgressBar = ({data}) => {
     credit: data.actual/data.goal
   }
   return(
-  <div style={style}>
+  <div className='column is-6'>
+  <div className="card events-card">
   <div style={indStyle} className="credit">
     <h1 className="title">credit</h1>
         <progress style={{marginLeft: "20px", width:"450px"}} className="progress is-primary progress is-large" value={data.credit.actual / data.credit.goal * 100} max="100"></progress>
@@ -52,10 +53,11 @@ const ProgressBar = ({data}) => {
         <progress style={{ marginLeft: "20px", width: "450px" }} className="progress is-primary progress is-large" value={data.insurance.actual / data.insurance.goal * 100} max="100">30%</progress>
         <span>actual: {data.insurance.actual} goal: {data.insurance.goal}</span>
   </div>
-  <div style={indStyle2}> 
+  <div style={indStyle2}>
         <h1 className="title">referals</h1>
         <progress style={{ marginLeft: "20px", width: "450px" }} className="progress is-info progress is-large" value={data.refer.actual / data.refer.goal * 100} max="100">30%</progress>
         <span>actual: {data.refer.actual} goal: {data.refer.goal}</span>
+  </div>
   </div>
   </div>
 
