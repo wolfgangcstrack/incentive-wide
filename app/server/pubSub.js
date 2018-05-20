@@ -1,4 +1,4 @@
-Meteor.publish('bankAccount', () => {
+Meteor.publish('bankAccounts', () => {
   return BankAccounts.find({});
 });
 
