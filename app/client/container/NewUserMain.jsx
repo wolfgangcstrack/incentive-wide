@@ -26,8 +26,6 @@ class NewUserMain extends React.Component {
 
   render() {
     return (
-      // <div className="section">
-      
         <div className="columns">
           <div className="column"></div>
             <div className="is-half">
@@ -50,7 +48,6 @@ class NewUserMain extends React.Component {
             </div>
           <div className="column"></div>
         </div>
-     // </div>
     );
   }
 }
