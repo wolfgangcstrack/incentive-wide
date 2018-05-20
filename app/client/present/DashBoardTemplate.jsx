@@ -5,6 +5,7 @@ import Referral from '../container/Referral';
 import SavingContainer from '../container/SavingContainer';
 import Insurance from '../container/InsuranceContainer';
 
+
 const DashBoardTemplate = ({ name }) => (
   <div>
     {/* NAVBAR  */ }
@@ -81,7 +82,9 @@ const DashBoardTemplate = ({ name }) => (
                 <div className="columns">
                   <div className="column is-half">
                     <div className="box">
-                      <Referral />
+                    <div style={{ margin: "auto", width: "260px" }}>
+                      <SavingContainer />
+                    </div>
                     </div>
                     <div className="column is-half">
                       <div className="box">

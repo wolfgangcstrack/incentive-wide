@@ -1,32 +1,30 @@
 import React from 'react';
 
-const style = {
-  // border: "1px solid black",
-  height: "260px",
-  width: "260px",
-}
 
-const picStyle = {
-  height: "90px",
-  width: "90px",
-  display: "block",
-  margin: " 0 auto",
-}
-const SavingTile = () => {
+const Modal = ({ children, closeModal, modalState, title }) => {
+  if (!modalState) {
+    return null;
+  }
+
   return (
-    <div style={style} className="SaveContainer">
-        <img style={picStyle} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyFlcLfCSwOEcwga43eSpVo0_DZYlT_4dd0NcNHstdaSGMxyXG" />
-
-      <div style={{paddingTop: "10px"}}>
-        <form>
-          <label>
-            Add:
-            <input type="text" name="add" />
-          </label>
-        </form>
+    <div className="modal is-active">
+      <div className="modal-background" onClick={closeModal} />
+      <div className="modal-card">
+        <header className="modal-card-head">
+          <p className="modal-card-title">{title}</p>
+          <button className="delete" onClick={closeModal} />
+        </header>
+        <section className="modal-card-body">
+          <div className="content">
+            {children}
+          </div>
+        </section>
+        <footer className="modal-card-foot">
+          <a className="button" onClick={closeModal}>Cancel</a>
+        </footer>
       </div>
     </div>
   );
-};
+}
 
-export default SavingTile;
+export default Modal;
