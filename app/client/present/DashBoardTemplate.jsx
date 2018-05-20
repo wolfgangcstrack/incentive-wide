@@ -3,9 +3,7 @@ import { CreditScoreContainer } from '../container/CreditScoreContainer';
 import { ReferFriendContainer } from '../container/ReferFriendContainer';
 import { ProgressBarContainer } from '../container/ProgressBarContainer';
 import { ProgressBar } from './ProgressBar';
-
-
-
+import Referral from '../container/Referral';
 
 const DashBoardTemplate = ({ name }) => (
   <div>
@@ -93,7 +91,7 @@ const DashBoardTemplate = ({ name }) => (
                   <div className="columns">
                     <div className="column is-half">
                       <div className="box">
-                        Referals
+                        <Referral />
                       </div>
                     </div>
                     <div className="column is-half">
