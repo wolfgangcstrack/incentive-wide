@@ -40,22 +40,22 @@ const ProgressBar = ({data}) => {
   <div className="card events-card">
   <div style={indStyle} className="credit">
     <h1 className="title">credit</h1>
-        <progress style={{marginLeft: "20px", width:"450px"}} className="progress is-primary progress is-large" value={data.credit.actual / data.credit.goal * 100} max="100"></progress>
+        <progress style={{marginLeft: "20px", width:"250px"}} className="progress is-primary progress is-large" value={data.credit.actual / data.credit.goal * 100} max="100"></progress>
     <span>actual: {data.credit.actual} goal: {data.credit.goal}</span>
   </div>
   <div style={indStyle2}>
         <h1 className="title">savings</h1>
-        <progress style={{ marginLeft: "20px", width: "450px" }} className="progress is-info progress is-large" value={data.savings.actual / data.savings.goal * 100} max="100">50%</progress>
+        <progress style={{ marginLeft: "20px", width: "250px" }} className="progress is-info progress is-large" value={data.savings.actual / data.savings.goal * 100} max="100">50%</progress>
     <span>actual: {data.savings.actual} goal: {data.savings.goal}</span>
   </div>
   <div style={indStyle}>
         <h1 className="title">insurance</h1>
-        <progress style={{ marginLeft: "20px", width: "450px" }} className="progress is-primary progress is-large" value={data.insurance.actual / data.insurance.goal * 100} max="100">30%</progress>
+        <progress style={{ marginLeft: "20px", width: "250px" }} className="progress is-primary progress is-large" value={data.insurance.actual / data.insurance.goal * 100} max="100">30%</progress>
         <span>actual: {data.insurance.actual} goal: {data.insurance.goal}</span>
   </div>
   <div style={indStyle2}>
         <h1 className="title">referals</h1>
-        <progress style={{ marginLeft: "20px", width: "450px" }} className="progress is-info progress is-large" value={data.refer.actual / data.refer.goal * 100} max="100">30%</progress>
+        <progress style={{ marginLeft: "20px", width: "250px" }} className="progress is-info progress is-large" value={data.refer.actual / data.refer.goal * 100} max="100">30%</progress>
         <span>actual: {data.refer.actual} goal: {data.refer.goal}</span>
   </div>
   </div>

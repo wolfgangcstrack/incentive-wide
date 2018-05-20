@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SavingTile from '../present/SavingTile'
 
 const style = {
-  border: "5px solid #3C362A",
+  // border: "5px solid #3C362A",
   height: "260px",
   width: "260px",
   // backgroundColor: "#3C362A"
@@ -48,7 +48,6 @@ class SavingContainer extends Component {
             </form>
           </div>
         </div>
-        );
       </div>
     );
   }
