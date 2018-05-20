@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withAlert } from 'react-alert';
 import { CreditScoreContainer } from '../container/CreditScoreContainer';
 import { ProgressBarContainer } from '../container/ProgressBarContainer';
 import Referral from '../container/Referral';
@@ -64,16 +65,9 @@ const DashBoardTemplate = ({ name }) => (
               <div className="column is-8">
                 <div className="box work">
                   <div className="columns">
-                    <div className="column is-half">
+                    <div className="column is-for">
                       <div className="box">
                         <CreditScoreContainer />
-                      </div>
-                    </div>
-                    <div className="column is-half">
-                      <div className="box">
-                        <Referral />
-
-
                       </div>
                     </div>
                   </div>
@@ -100,4 +94,4 @@ const DashBoardTemplate = ({ name }) => (
     </div>
 );
 
-module.exports.DashBoardTemplate = DashBoardTemplate;
+export default withAlert(DashBoardTemplate);
