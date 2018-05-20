@@ -1,15 +1,19 @@
 import axios from 'axios';
 
-const url = 'nw-angelhack-2018-mocks.us-east-1.elasticbeanstalk.com';
+export default function fetchBankAccountTransactions() {
+  const baseUrl = 'http://nw-angelhack-2018-mocks.us-east-1.elasticbeanstalk.com';
+  const bankAccounts = BankAccounts.find().fetch(); // Note: never do this in a real project
 
-Meteor.methods({
-  getBankAccountTransactions: (customerId) => {
-    return axios.get(`${url}/bankAccounts/${customerId}/bankAccountTransactions`)
-      .then((res) => {
-        return res;
-      })
-      .catch((err) => {
-        console.error(err);
+  bankAccounts.forEach((bankAccount) => {
+    const { id } = bankAccount;
+    axios.get(`${baseUrl}/bankAccounts/${id}/bankAccountTransactions`).then((response) => {
+      const { data: bankAccountTransactions } = response;
+
+      bankAccountTransactions.forEach((bankAccountTransaction) => {
+        const modeledBankAccountTransaction = new BankAccountTransaction(bankAccountTransaction);
+        const { id } = modeledBankAccountTransaction;
+        BankAccountTransactions.upsert({id}, {$set: modeledBankAccountTransaction});
       });
-  },
-});
+    })
+  });
+}
