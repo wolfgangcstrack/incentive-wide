@@ -74,11 +74,11 @@ const DashBoardTemplate = ({ name }) => (
                     </div>
                 </div>
               <div className="column is-8">
-                <div className="box">
+                <div className="box work">
                   <div className="columns">
                     <div className="column is-half">
                       <div className="box">
-                      Credit
+                        <CreditScoreContainer />
                       </div>
                     </div>
                     <div className="column is-half">
