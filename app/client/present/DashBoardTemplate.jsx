@@ -4,7 +4,8 @@ import { ReferFriendContainer } from '../container/ReferFriendContainer';
 import { ProgressBarContainer } from '../container/ProgressBarContainer';
 import { ProgressBar } from './ProgressBar';
 import Referral from '../container/Referral';
-
+import SavingContainer from '../container/SavingContainer';
+import Insurance from '../container/InsuranceContainer';
 const DashBoardTemplate = ({ name }) => (
   <div>
 
@@ -59,20 +60,7 @@ const DashBoardTemplate = ({ name }) => (
               <br/>
 
               <div className="columns">
-                <div className="column is-4">
-                    <div className='box'>
-                    <progress className="progress is-primary" value="15" max="100">30%</progress>
-                    </div>
-                    <div className='box'>
-                    <progress className="progress is-primary" value="15" max="100">30%</progress>
-                    </div><div className='box'>
-                    <progress className="progress is-primary" value="15" max="100">30%</progress>
-                    </div><div className='box'>
-                    <progress className="progress is-primary" value="15" max="100">30%</progress>
-                    </div><div className='box'>
-                    <progress className="progress is-primary" value="15" max="100">30%</progress>
-                    </div>
-                </div>
+        <ProgressBarContainer />
               <div className="column is-8">
                 <div className="box work">
                   <div className="columns">
@@ -83,7 +71,10 @@ const DashBoardTemplate = ({ name }) => (
                     </div>
                     <div className="column is-half">
                       <div className="box">
-                        Insurance
+                        <Insurance />
+
+
+
                       </div>
                     </div>
                   </div>
@@ -96,7 +87,7 @@ const DashBoardTemplate = ({ name }) => (
                     </div>
                     <div className="column is-half">
                       <div className="box">
-                        Savings
+                        <SavingContainer />
                       </div>
                     </div>
                   </div>
